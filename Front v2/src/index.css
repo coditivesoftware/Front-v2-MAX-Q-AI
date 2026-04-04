@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* MAX-Q AI — Design Tokens */
+/* Tailwind v4 @theme */
+
+@theme {
+    /* === PRIMARIOS === */
+    --color-primary:            #DDDDDD;
+    --color-primary-container:  #242424;
+    --color-on-primary:         #030303;
+    --color-on-primary-container: #DDDDDD;
+  
+    /* === SECUNDARIOS === */
+    --color-secondary:          #0F0F0F;
+    --color-on-secondary:       #ADADAD;
+  
+    /* === SUPERFICIES === */
+    --color-surface:            #030303;
+    --color-outline:            #363636;
+  
+    /* === ERROR === */
+    --color-error-container:    #1F1F1F;
+    --color-on-error:           #FF9A9A;
+  }
+
+
+  /* === ESTILOS BASE GLOBALES === */
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-primary);
+    }
+  
+    p, li, a, label {
+      color: var(--color-on-secondary);
+    }
+
+    body {
+        background-color: var(--color-surface);
+      }
+  }
