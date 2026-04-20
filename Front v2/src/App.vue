@@ -5,6 +5,7 @@ import { reactive } from 'vue'
 
 
 
+
 const navItems = reactive([
   { label: 'SearchCriterion', to: '/' },
   { label: 'UploadFilm',  to: '/uploadFilm'  },
@@ -14,12 +15,12 @@ const navItems = reactive([
 </script>
 
 <template>
-  <BaseNavBar :navItems="navItems"/>
-  <main class="pt-20 min-h-screen">
-    <div class="max-w-5xl mx-auto px-6 py-10">
+  <div class="flex flex-col h-screen overflow-hidden">
+  <BaseNavBar/>
+  <main class="flex-1 overflow-y-auto pt-20">
       <RouterView />
-    </div>
   </main>
+</div>
 </template>
 
 <style scoped></style>

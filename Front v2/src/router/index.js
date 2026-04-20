@@ -1,10 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import UploadFilm from '../components/UploadFilm.vue'
 import SearchCriterionSelector from '@/components/SearchCriterionSelector.vue'
+import ProcessingState from '@/components/ProcessingState.vue'
+import SearchResults from '@/components/SearchResults.vue'
 
 const routes = [
-    {path:'/',component:SearchCriterionSelector},
-    {path:'/uploadFilm',component:UploadFilm}
+    {path:'/',component:UploadFilm},
+    {path:'/searchCriterionSelector', component:SearchCriterionSelector},
+    {name:'processing', path:'/processing', component:ProcessingState},
+    {path:'/searchResults/:id', component:SearchResults},
   ]
 
 

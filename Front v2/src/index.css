@@ -5,6 +5,8 @@
 
 @theme {
     /* === PRIMARIOS === */
+  
+  
     --color-primary:            #DDDDDD;
     --color-primary-container:  #242424;
     --color-on-primary:         #030303;
@@ -21,6 +23,22 @@
     /* === ERROR === */
     --color-error-container:    #1F1F1F;
     --color-on-error:           #FF9A9A;
+
+    --font-maxq-headlines-font-family: "AlvaradoVar";
+    --font-maxq-text-font-family: "BarlowSemiConsended-Medium"
+  }
+
+  @font-face {
+    font-family: AlvaradoVar;
+    font-weight: 700;
+    src: url("fonts/AlvaradoVar.ttf");
+  }
+
+  
+  @font-face {
+    font-family: BarlowSemiConsended-Medium;
+    font-weight: 100;
+    src: url("fonts/BarlowSemiCondensed-Medium.ttf");
   }
 
 
@@ -29,13 +47,37 @@
 @layer base {
     h1, h2, h3, h4, h5, h6 {
       color: var(--color-primary);
+      font-family: var(--font-maxq-headlines-font-family);
     }
   
     p, li, a, label {
       color: var(--color-on-secondary);
+      font-family: var(--font-maxq-text-font-family);
     }
 
     body {
         background-color: var(--color-surface);
       }
+
+
+      input,
+      textarea,
+      select {
+        font-family: var(--font-maxq-text-font-family);
+        color: var(--color-on-secondary);
+      }
+    
+      /* Placeholder (hints) */
+      input::placeholder,
+      textarea::placeholder {
+        font-family: var(--font-maxq-text-font-family);
+        color: var(--color-on-secondary);
+        opacity: 0.6; /* optional for typical "hint" look */
+      }
+  }
+
+
+  html, body, #app {
+    height: 100%;
+    margin: 0;
   }

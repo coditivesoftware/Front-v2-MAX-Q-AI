@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, useRoute} from 'vue-router'
+import maxQLogo from '../assets/logos/max-q-logo.png'
+
 
 const route = useRoute()
 
@@ -15,9 +17,10 @@ const avatarSrc = ''
 </script>
 
 <template>
-    <header class="bg-surface border-b border-white/10 z-50 fixed top-0 w-full flex justify-between items-center px-6 py-4 shadow-[0px_12px_32px_rgba(0,220,229,0.06)]">
+    <header class="bg-surface border-b border-white/10 z-50 fixed top-0 w-full flex justify-between items-center px-6 py-4">
   
       <div class="flex items-center gap-8">
+        <img :src="maxQLogo" class="w-12"/>
         <span class="text-xl font-bold tracking-tighter text-primary font-headline">
           Scene Finder
         </span>

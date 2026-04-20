@@ -3,6 +3,10 @@ import { ref, computed } from 'vue'
 import BaseInputField from './BaseInputField.vue'
 import BaseTextArea from './BaseTextArea.vue'
 import BaseButton from './BaseButton.vue'
+import { useRouter } from 'vue-router'
+
+//icons
+import PlayIcon from '@/assets/icons/PlayIcon.vue';
 
 const projectName = ref('')
 const description = ref('')
@@ -12,6 +16,8 @@ const uploadProgress = ref(0)
 const statusMessage = ref('')
 const hasError = ref(false)
 const isProcessing = ref(false) //locks the text data inputs when the video processing is started
+
+const router = useRouter()
 
 const ACCEPTED_TYPES = ['video/mp4', 'video/quicktime', 'video/x-msvideo']
 const ACCEPTED_EXTENSIONS = ['.mp4', '.mov', '.mxf']
@@ -81,6 +87,7 @@ async function handleSubmit() {
     clearInterval(interval)
     uploadProgress.value = 100
     statusMessage.value = 'Archivo recibido. Procesamiento iniciado.'
+    router.push('/searchCriterionSelector')
     // router.push(`/projects/${newProjectId}`)
   } catch (err) {
     clearInterval(interval)
@@ -93,14 +100,7 @@ async function handleSubmit() {
 
 
 <template>
-    <div class="min-h-screen bg-[var(--color-surface)] px-8 py-10">
-  
-      <!-- Breadcrumb -->
-      <nav class="flex items-center gap-2 text-xs tracking-widest uppercase mb-8">
-        <span class="text-[var(--color-on-secondary)] opacity-40">Dashboard</span>
-        <span class="text-[var(--color-outline)]">›</span>
-        <span class="text-[var(--color-primary)] opacity-70">New Project</span>
-      </nav>
+    <div class="flex flex-col flex-1 bg-[var(--color-surface)] px-30 py-10">
   
       <!-- Header -->
       <div class="mb-10">
@@ -150,7 +150,7 @@ async function handleSubmit() {
           </div>
   
           <!-- CMP-04: PrimaryButton -->
-       <BaseButton :can-submit="canSubmit" title="Comenzar Procesamiento" @click="handleSubmit"></BaseButton>
+       <BaseButton :can-submit="canSubmit" title="Comenzar Procesamiento" :icon="PlayIcon" @click="handleSubmit"></BaseButton>
   
         </div>
   
