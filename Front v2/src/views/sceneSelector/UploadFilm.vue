@@ -1,8 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
-import BaseInputField from './BaseInputField.vue'
-import BaseTextArea from './BaseTextArea.vue'
-import BaseButton from './BaseButton.vue'
+import BaseInputField from '@/components/BaseInputField.vue'
+import BaseTextArea from '@/components/BaseTextArea.vue'
+import BaseButton from '@/components/BaseButton.vue'
 import { useRouter } from 'vue-router'
 
 //icons

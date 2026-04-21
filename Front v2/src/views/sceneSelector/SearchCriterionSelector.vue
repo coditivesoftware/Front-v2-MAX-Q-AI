@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import SelectorButton from './BaseSelectorButton.vue'
-import BaseButton from './BaseButton.vue'
-import SearchCriterionSelectorPromptBox from './SearchCriterionSelectorPromptBox.vue'
+import SelectorButton from '@/components/BaseSelectorButton.vue'
+import BaseButton from '@/components/BaseButton.vue'
+import SearchCriterionSelectorPromptBox from '@/components/SearchCriterionSelectorPromptBox.vue'
 import { useRouter } from 'vue-router'
 
 
@@ -10,7 +10,7 @@ const router = useRouter()
 
 
 //icons
-import CoreStoryIcon from '../assets/icons/CoreStoryIcon.vue'
+import CoreStoryIcon from '@/assets/icons/CoreStoryIcon.vue'
 import PromptSearchIcon from '@/assets/icons/PromptSearchIcon.vue'
 
 
