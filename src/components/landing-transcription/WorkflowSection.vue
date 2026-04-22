@@ -10,19 +10,19 @@ const steps = [
     number: '01',
     title: 'UPLOAD YOUR FOOTAGE',
     description: 'Upload your footage. Drop your film file — any format works.',
-    img: '/src/img/landing/Drag and Drop.png',
+    img: '@/assets/images/landing-transcription/Drag and Drop.png',
   },
   {
     number: '02',
     title: 'SET PARAMETERS',
     description: 'Choose languages. Pick the markets you\'re targeting.',
-    img: '/src/img/landing/choose languages.png',
+    img: '@/assets/images/landing-transcription/choose languages.png',
   },
   {
     number: '03',
     title: 'DOWNLOAD TRANSCRIPT',
     description: 'Download your transcription. Any format and ready to submit.',
-    img: '/src/img/landing/ download your transcription.png',
+    img: '@/assets/images/landing-transcription/ download your transcription.png',
   },
 ]
 

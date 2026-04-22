@@ -1,13 +1,13 @@
 <script setup>
-import TheNavbar from '@/components/TheNavbar.vue'
-import HeroSection from '@/components/HeroSection.vue'
-import ProblemSection from '@/components/ProblemSection.vue'
-import PrecisionSection from '@/components/PrecisionSection.vue'
-import WorkflowSection from '@/components/WorkflowSection.vue'
-import AccuracySection from '@/components/AccuracySection.vue'
-import FaqSection from '@/components/FaqSection.vue'
-import CtaSection from '@/components/CtaSection.vue'
-import TheFooter from '@/components/TheFooter.vue'
+import TheNavbar from '@/components/landing-transcription/TheNavbar.vue'
+import HeroSection from '@/components/landing-transcription/HeroSection.vue'
+import ProblemSection from '@/components/landing-transcription/ProblemSection.vue'
+import PrecisionSection from '@/components/landing-transcription/PrecisionSection.vue'
+import WorkflowSection from '@/components/landing-transcription/WorkflowSection.vue'
+import AccuracySection from '@/components/landing-transcription/AccuracySection.vue'
+import FaqSection from '@/components/landing-transcription/FaqSection.vue'
+import CtaSection from '@/components/landing-transcription/CtaSection.vue'
+import TheFooter from '@/components/landing-transcription/TheFooter.vue'
 </script>
 
 <template>

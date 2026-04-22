@@ -48,7 +48,7 @@ onUnmounted(() => ctx?.revert())
 
 			<!-- Video + Transcript panel -->
 			<div class="precision-panel">
-				<img src="/src/img/landing/PAN 1.png" alt="Precision panel" class="w-full h-full object-cover">
+				<img src="@/assets/images/landing-transcription/PAN 1.png" alt="Precision panel" class="w-full h-full object-cover">
 			</div>
 		</div>
 	</section>
