@@ -3,6 +3,10 @@ import { onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import imgDragDrop from '@/assets/images/landing-transcription/Drag and Drop.png'
+import imgChooseLanguages from '@/assets/images/landing-transcription/choose languages.png'
+import imgDownload from '@/assets/images/landing-transcription/ download your transcription.png'
+
 gsap.registerPlugin(ScrollTrigger)
 
 const steps = [
@@ -10,19 +14,19 @@ const steps = [
     number: '01',
     title: 'UPLOAD YOUR FOOTAGE',
     description: 'Upload your footage. Drop your film file — any format works.',
-    img: '@/assets/images/landing-transcription/Drag and Drop.png',
+    img: imgDragDrop,
   },
   {
     number: '02',
     title: 'SET PARAMETERS',
     description: 'Choose languages. Pick the markets you\'re targeting.',
-    img: '@/assets/images/landing-transcription/choose languages.png',
+    img: imgChooseLanguages,
   },
   {
     number: '03',
     title: 'DOWNLOAD TRANSCRIPT',
     description: 'Download your transcription. Any format and ready to submit.',
-    img: '@/assets/images/landing-transcription/ download your transcription.png',
+    img: imgDownload,
   },
 ]
 
