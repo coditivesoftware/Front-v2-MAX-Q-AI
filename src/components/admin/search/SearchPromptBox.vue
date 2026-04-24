@@ -1,9 +1,8 @@
 <script setup>
-import BaseSecondaryButton from './BaseSecondaryButton.vue'
+import BaseSecondaryButton from '@/components/ui/BaseSecondaryButton.vue'
 
-//icons
-import ClockIcon from '@/assets/icons/ClockIcon.vue'
-import PlusIcon from '@/assets/icons/PlusIcon.vue'
+import ClockIcon from '@/components/icons/ClockIcon.vue'
+import PlusIcon from '@/components/icons/PlusIcon.vue'
 
 const promptModel = defineModel()
 

@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, useRoute} from 'vue-router'
-import maxQLogo from '../assets/logos/max-q-logo.png'
+import maxQLogo from '@/assets/logos/max-q-logo.png'
 
 
 const route = useRoute()

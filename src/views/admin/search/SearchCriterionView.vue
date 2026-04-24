@@ -1,17 +1,14 @@
 <script setup>
 import { ref } from 'vue'
-import SelectorButton from '@/components/BaseSelectorButton.vue'
-import BaseButton from '@/components/BaseButton.vue'
-import SearchCriterionSelectorPromptBox from '@/components/SearchCriterionSelectorPromptBox.vue'
+import SelectorButton from '@/components/ui/BaseSelectorButton.vue'
+import BaseButton from '@/components/ui/BaseButton.vue'
+import SearchPromptBox from '@/components/admin/search/SearchPromptBox.vue'
 import { useRouter } from 'vue-router'
 
+import CoreStoryIcon from '@/components/icons/CoreStoryIcon.vue'
+import PromptSearchIcon from '@/components/icons/PromptSearchIcon.vue'
 
 const router = useRouter()
-
-
-//icons
-import CoreStoryIcon from '@/assets/icons/CoreStoryIcon.vue'
-import PromptSearchIcon from '@/assets/icons/PromptSearchIcon.vue'
 
 
 const selected = ref('free')
@@ -25,7 +22,7 @@ function select(type) {
 function continuar() {
   if (!selected.value) return
   console.log('Continuing with:', selected.value, prompt.value)
-  router.push({name:'processing', query:{job_id:'asdfg', job_type:'scene_analysis', selectedValue:selected.value, prompt:prompt.value}})
+  router.push({name:'admin-processing', query:{job_id:'asdfg', job_type:'scene_analysis', selectedValue:selected.value, prompt:prompt.value}})
 }
 
 
@@ -59,7 +56,7 @@ function continuar() {
 
       <!-- Prompt box -->
       <Transition name="prompt">
-     <SearchCriterionSelectorPromptBox v-if="selected === 'free'" v-model="prompt"></SearchCriterionSelectorPromptBox>      
+     <SearchPromptBox v-if="selected === 'free'" v-model="prompt"></SearchPromptBox>      
       </Transition>
 
       <!-- CTA -->

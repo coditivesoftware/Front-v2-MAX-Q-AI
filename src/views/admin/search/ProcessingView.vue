@@ -3,7 +3,6 @@
 import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useJobStatus } from '@/composables/useJobStatus'
-import { JOB_ROUTES } from '@/config/jobRoutes'
 const route  = useRoute()
 const router = useRouter()
 
@@ -31,8 +30,7 @@ watch(job, (val) => {
   if (!val) return
 
   if (val.status === 'complete') {
-    const destination = JOB_ROUTES[jobType.value]?.(val.result_id)
-    if (destination) router.push(destination)
+    router.push({ name: 'admin-results', params: { id: val.result_id } })
   }
 
   if (val.status === 'failed') {

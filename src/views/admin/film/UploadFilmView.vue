@@ -1,12 +1,11 @@
 <script setup>
 import { ref, computed } from 'vue'
-import BaseInputField from '@/components/BaseInputField.vue'
-import BaseTextArea from '@/components/BaseTextArea.vue'
-import BaseButton from '@/components/BaseButton.vue'
+import BaseInputField from '@/components/ui/BaseInputField.vue'
+import BaseTextArea from '@/components/ui/BaseTextArea.vue'
+import BaseButton from '@/components/ui/BaseButton.vue'
 import { useRouter } from 'vue-router'
 
-//icons
-import PlayIcon from '@/assets/icons/PlayIcon.vue';
+import PlayIcon from '@/components/icons/PlayIcon.vue'
 
 const projectName = ref('')
 const description = ref('')
@@ -87,7 +86,7 @@ async function handleSubmit() {
     clearInterval(interval)
     uploadProgress.value = 100
     statusMessage.value = 'Archivo recibido. Procesamiento iniciado.'
-    router.push('/searchCriterionSelector')
+    router.push({ name: 'admin-search' })
     // router.push(`/projects/${newProjectId}`)
   } catch (err) {
     clearInterval(interval)
