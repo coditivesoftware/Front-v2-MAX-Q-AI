@@ -24,7 +24,7 @@ const routes = [
       {
         path: 'upload',
         name: 'admin-upload',
-        component: () => import('@/views/admin/film/UploadFilmView.vue'),
+        component: () => import('@/views/admin/upload/UploadView.vue'),
       },
       {
         path: 'search',
