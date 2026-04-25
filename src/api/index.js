@@ -1,3 +1,5 @@
 export * as films from './films'
 export * as jobs from './jobs'
 export * as search from './search'
+export * as media from './media'
+export * as projects from './projects'
