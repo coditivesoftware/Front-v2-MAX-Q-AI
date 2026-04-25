@@ -73,7 +73,9 @@ export function completeMultipartUpload(projectId, assetId, { upload_id, parts }
 // --- Transcription ---
 
 export function requestTranscription(projectId, assetId) {
-  return client.post(`/projects/${projectId}/media/${assetId}/transcriptions/`, {})
+  return client.post(`/projects/${projectId}/media/${assetId}/transcriptions/`, {
+    metadata: { source: 'web' },
+  })
 }
 
 export function getTranscription(projectId, assetId) {
