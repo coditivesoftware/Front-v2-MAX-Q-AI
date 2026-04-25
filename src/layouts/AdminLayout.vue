@@ -3,7 +3,8 @@ import BaseNavBar from '@/components/ui/BaseNavBar.vue'
 import { reactive } from 'vue'
 
 const navItems = reactive([
-  { label: 'Upload Film', to: '/admin/upload' },
+  { label: 'Projects', to: '/admin/projects' },
+  { label: 'Upload', to: '/admin/upload' },
   { label: 'Search', to: '/admin/search' },
 ])
 </script>
