@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/LoginView.vue'),
+  },
+  {
     path: '/',
     component: () => import('@/layouts/LandingLayout.vue'),
     children: [
@@ -14,12 +19,18 @@ const routes = [
   },
   {
     path: '/admin',
+    meta: { requiresAuth: true },
     component: () => import('@/layouts/AdminLayout.vue'),
     children: [
       {
         path: '',
         name: 'admin-home',
         component: () => import('@/views/admin/AdminHomeView.vue'),
+      },
+      {
+        path: 'projects',
+        name: 'admin-projects',
+        component: () => import('@/views/admin/ProjectsView.vue'),
       },
       {
         path: 'upload',
@@ -48,6 +59,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+})
+
+router.beforeEach((to) => {
+  const isAuthenticated = !!localStorage.getItem('auth_token')
+
+  if (to.matched.some((r) => r.meta.requiresAuth) && !isAuthenticated) {
+    return { name: 'login' }
+  }
+
+  if (to.name === 'login' && isAuthenticated) {
+    return { name: 'admin-projects' }
+  }
 })
 
 export default router
