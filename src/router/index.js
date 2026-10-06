@@ -61,6 +61,8 @@ const router = createRouter({
   routes,
 })
 
+
+/*
 router.beforeEach((to) => {
   const isAuthenticated = !!localStorage.getItem('auth_token')
 
@@ -72,5 +74,7 @@ router.beforeEach((to) => {
     return { name: 'admin-projects' }
   }
 })
+
+*/
 
 export default router
