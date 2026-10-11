@@ -89,7 +89,7 @@ function togglePlay() {
         <div class="w-[280px] bg-[#111] border-r border-white/10 flex flex-col ">
           <div class="flex-1 overflow-y-auto p-4  ">
 
-            <div>
+            <div class="mb-3">
               
               <p>
                 PROJECT
@@ -115,7 +115,7 @@ function togglePlay() {
               <div class="space-y-2 ml-6">
               <!-- selectors-->
                
-               <KeyframeGroupSelector :acts="acts" />
+               <KeyframeGroupSelector v-model:acts="acts" :select-act="selectAct" :selected-act="selectedAct" />
 
               </div>
             </div>

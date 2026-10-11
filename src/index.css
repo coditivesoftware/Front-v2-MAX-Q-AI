@@ -54,6 +54,7 @@
     p, li, a, label {
       color: var(--color-on-secondary);
       font-family: var(--font-maxq-text-font-family);
+      font-size:small;
     }
 
     body {
@@ -76,6 +77,13 @@
         opacity: 0.6; /* optional for typical "hint" look */
       }
   }
+
+
+  @layer components{
+
+
+  }
+
 
 
   html, body, #app {

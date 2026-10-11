@@ -1,5 +1,7 @@
 <script setup>
-const props = defineProps(['acts'])
+const acts = defineModel('acts')
+const selectAct = defineModel('selectAct')
+const selectedAct = defineModel('selectedAct')
 </script>
 
 
@@ -7,7 +9,7 @@ const props = defineProps(['acts'])
     <button
         v-for="act in acts"
         :key="act.id"
-        @click="selectAct(props.act.id)"
+        @click="selectAct(act.id)"
         :class="[
         'w-full text-left p-2 border rounded',
         selectedAct === act.id
@@ -15,9 +17,9 @@ const props = defineProps(['acts'])
             : 'border-white/10 hover:border-[#c8ff00]/40 hover:bg-[#c8ff00]/5'
         ]"
         >
-        <div class="text-xs font-medium">{{ props.act.label }}</div>
+        <div class="text-xs font-medium">{{ act.label }}</div>
         <div class="text-[10px] text-gray-500 font-mono">
-        {{ props.act.kfCount }} keyframes
+        {{ act.kfCount }} keyframes
         </div>
 </button>
 </template>
