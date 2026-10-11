@@ -20,6 +20,7 @@ const film = ref({
 
               <p>
                 I analyzed the footage. These are the main ideas.
+                
               </p>
             </div>
 
